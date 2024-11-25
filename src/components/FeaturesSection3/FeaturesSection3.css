@@ -1,0 +1,156 @@
+/* Ensure no overflow on the body or html */
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.feature-section {
+  padding-top: 3rem !important;
+  padding-bottom: 12rem !important;
+  width: 100%;
+  box-sizing: border-box; /* Ensure section fits within the screen */
+}
+
+.feature-box {
+  background-color: rgba(240, 244, 248, 1);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  margin: 0 10px; /* Add gap between boxes */
+  box-sizing: border-box; /* Include padding within width */
+  display: flex;
+  flex-direction: column; /* Ensure proper flex behavior */
+  justify-content: space-between; /* Prevent overflow */
+  align-items: center;
+}
+
+.feature-box h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #243c5a; /* Adjust color to match the theme */
+}
+
+.feature-box p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #555555;
+  margin-bottom: 1.5rem;
+}
+
+.feature-box .feature-icon {
+  display: flex;
+  justify-content: center; /* Center images horizontally */
+  align-items: center; /* Center images vertically */
+}
+
+.feature-box .feature-icon img {
+  filter: grayscale(100%) brightness(0) invert(1) sepia(1) saturate(10000%) hue-rotate(170deg); /* Converts to consistent blue */
+  background-color: transparent; /* Keeps the background transparent */
+  mix-blend-mode: normal; /* Ensures no unwanted blending */
+  width: 70px; /* Increased size for better visibility */
+  height: 70px; /* Increased size for better visibility */
+}
+
+.transition-effect:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Slick slider container */
+.slick-slider {
+  width: 100%;
+  box-sizing: border-box; /* Prevent overflow */
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center; /* Centering each slide */
+  padding: 0 10px; /* Added padding between slides */
+}
+.slick-list{
+  margin-bottom: 22px;
+}
+
+/* Slick dots (pagination) */
+  .slick-dots {
+    bottom: 0px !important;
+  }
+
+  .slick-dots li button:before {
+    color: #000000; /* Active dot color */
+  }
+  
+  .slick-dots li button {
+    color: #d3d3d3; /* Inactive dots (light grey) */
+  }
+  
+
+.slick-prev:before {
+  color: #6a6363 !important;
+}
+
+.slick-next:before {
+  color: #6a6363 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .feature-box h4 {
+    font-size: 1.25rem;
+  }
+
+  .feature-box p {
+    font-size: 0.9rem;
+  }
+
+  .feature-box {
+    margin: 0 5px;
+  }
+
+  .feature-box img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-p{
+    padding: 0px 24px;
+  }
+  .feature-box {
+    margin: 0 auto; /* Remove side margins to avoid overflow */
+    padding: 15px;
+  }
+
+  .feature-box h4 {
+    font-size: 1.15rem;
+  }
+
+  .feature-box p {
+    font-size: 0.85rem;
+  }
+
+  .feature-box img {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Hide arrows on mobile */
+  .slick-prev:before {
+    display: none;
+  }
+  .slick-next:before {
+    display: none;
+  }
+
+  /* Prevent horizontal scroll on mobile */
+  .slick-slider {
+    overflow-x: hidden;
+  }
+}

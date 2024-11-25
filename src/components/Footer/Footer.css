@@ -1,0 +1,239 @@
+.footer-section {
+  font-family: "Plus Jakarta Sans", "Poppins", sans-serif;
+  color: black;
+  padding: 2rem 0;
+}
+
+.footer-logo {
+  width: 120px;
+  max-width: 100%;
+}
+
+.footer-description {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(113, 113, 122, 1);
+}
+
+.footer-heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  text-align: center; /* Aligns links for smaller screens */
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #2c2929;
+}
+
+.footer-address {
+  font-size: 16px;
+  color: rgba(113, 113, 122, 1);
+  text-align: center;
+}
+
+.social-icons {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  font-size: 20px;
+  color: rgb(24, 24, 121);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.social-icons a:hover {
+  color: rgb(1, 137, 241);
+}
+
+.footer-form {
+  text-align: center;
+}
+
+.footer-form input {
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 70%;
+}
+
+.footer-form button {
+  font-size: 16px;
+  font-weight: 500;
+  background: rgba(36, 100, 148, 1);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+.footer-form button:hover {
+  background-color: #242f3f;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  color: #b3b3b3;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* Logos */
+.logo-head {
+  width: 100%;
+}
+
+.logo-desc {
+  width: 100%;
+}
+.saudi-logo-head{
+  margin-left: 22px;
+  margin-top: -106px;
+}
+.saudi-logo-desc{
+  margin-top: -45px;
+    margin-left: 155px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .footer-section {
+    padding: 2rem 1rem;
+  }
+
+  .footer-description {
+    font-size: 16px;
+  }
+
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+
+  .footer-form input {
+    width: 80%;
+  }
+}
+@media (max-width: 976px) {
+  .zatac-logo-head{
+    margin-left: 54px;
+  }
+  .zatac-logo-desc{
+    margin-left: 49px;
+  }
+  .saudi-logo-head{
+    margin-top: -127px !important;
+  }
+  .saudi-logo-desc{
+    margin-left:-52px !important;
+    margin-top: 8px !important;
+  }
+  .footer-address{
+    margin-top: 6px !important;
+  }
+}
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-description {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+
+  .footer-links li {
+    margin-bottom: 5px;
+  }
+  .footer-form {
+    display: flex;
+    flex-direction: column; /* Inputs aur buttons ko vertical stack karega */
+    align-items: center; /* Horizontal center karega */
+    justify-content: center; /* Vertical center karega */
+  }
+
+  .footer-form input {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 9px;
+  }
+
+  .footer-form button {
+    width: 100%;
+  }
+
+  .footer-address {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-top: 1rem;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+    margin: 0 5px;
+  }
+  .zatac-logo-head{
+    margin-left: -5px !important;
+  }
+  .zatac-logo-desc{
+    margin-top: 117px;
+    margin-left: -150px;
+  }
+  .saudi-logo-head{
+    margin-top: 3px !important;
+  }
+  .saudi-logo-desc{
+    margin-top: 123px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-description {
+    font-size: 12px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  .footer-form input {
+    font-size: 14px;
+  }
+
+  .footer-form button {
+    font-size: 14px;
+  }
+
+  .footer-address {
+    font-size: 12px;
+  }
+
+  .social-icons a {
+    font-size: 16px;
+  }
+}

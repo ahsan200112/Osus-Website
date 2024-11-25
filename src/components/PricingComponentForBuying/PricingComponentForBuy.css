@@ -1,0 +1,144 @@
+/* Pricing Section */
+.pricing-section {
+    font-family: "Poppins", sans-serif;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .toggle-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .toggle-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    background-color: white;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+  }
+  
+  .toggle-button.active {
+    background-color: rgb(36, 100, 148);;
+    color: white;
+    border-color: rgb(36, 100, 148);;
+  }
+  
+  .save-badge {
+    font-size: 14px;
+    color: rgb(36, 100, 148);;
+    margin-left: 5px;
+  }
+  
+  /* Pricing Cards */
+  .pricing-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .pricing-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .pricing-card.highlighted {
+    background-color: rgb(36, 100, 148);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  .pricing-card.highlighted li{
+    color: white;
+  }
+  .pricing-card.highlighted button:hover{
+    background-color: white;
+    color: rgb(36, 100, 148);
+  }
+  
+  .plan-title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .plan-description {
+    font-size: 14px;
+    margin: 10px 0 20px;
+  }
+  
+  .plan-price {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .plan-price .price {
+    font-size: 36px;
+  }
+  
+  .plan-button {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0066cc;
+    background-color: white;
+    border: 1px solid #0066cc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .plan-button:hover {
+    background-color: rgb(36, 100, 148);;
+    color: white;
+  }
+  
+  /* Plan Features */
+  .plan-features {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .feature {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .feature.available {
+    color: #333;
+  }
+  
+  .feature.unavailable {
+    color: #aaa;
+  }
+  .pricing-card.highlighted .feature.unavailable{
+    color: #aaa !important ;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .pricing-cards-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .pricing-card {
+      max-width: 100%;
+    }
+  
+    .plan-price {
+      font-size: 24px;
+    }
+  }
+  

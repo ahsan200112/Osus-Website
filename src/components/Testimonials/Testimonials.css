@@ -1,0 +1,15 @@
+/* General Section Styling */
+.testimonials-section {
+    background: rgb(65 115 153); /* Section background color */
+    font-family: "Plus Jakarta Sans", sans-serif; /* Use Plus Jakarta Sans */
+  }
+  .testimonials-section h5{
+    font-weight: 500 !important;
+  }
+  .testimonials-section p{
+  color: rgba(202, 202, 202, 1);
+}
+.testimonials-section h6{
+    font-weight: 500 !important;
+    font-size: 18px !important;
+  }

@@ -1,0 +1,117 @@
+.feature-section-2 {
+    font-family: "Plus Jakarta Sans";
+  }
+  .feature-section-2 img {
+    max-width: 100%;
+    height: auto;
+  }
+  .feature-section-2 p{
+    font-weight: 400;
+  }
+  
+  .feature-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+  /*
+  .feature-box:hover {
+    transform: translateY(-10px); 
+  } 
+  */
+  
+  .feature-image {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .feature-box h5 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .feature-box p {
+    font-size: 18px;
+    color: #6c757d;
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .feature-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content is spaced evenly */
+    align-items: center;
+    min-height: 300px; /* Set a minimum height to keep boxes the same size */
+  }
+  
+.feature-box img {
+  max-height: 80px; /* Limit image height */
+  object-fit: contain; /* Make sure image scales correctly without distortion */
+}
+  
+  
+ /* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  .feature-section-2 h2 {
+    font-size: 35px; /* Adjust font size for medium screens */
+  }
+
+  .feature-section-2 p {
+    font-size: 18px; /* Adjust paragraph font size */
+  }
+}
+
+@media (max-width: 992px) {
+  .feature-section-2 h2 {
+    font-size: 30px; /* Adjust font size for tablets */
+  }
+
+  .feature-section-2 p {
+    font-size: 16px; /* Adjust paragraph font size for tablets */
+  }
+
+  .feature-box {
+    padding: 3rem; /* Reduce padding for better alignment on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Stacking layout for mobile devices */
+  .feature-box {
+    margin-bottom: 20px; /* Add space between boxes */
+    justify-content: center;
+    min-height: 250px;
+  }
+
+  .feature-section-2 h2 {
+    font-size: 25px; /* Adjust font size for mobile */
+  }
+
+  .feature-section-2 p {
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+
+  .feature-box img {
+    max-width: 100%; /* Make sure image doesn't overflow */
+    margin-bottom: 20px; /* Add space between image and text */
+  }
+  .feature-box h5,
+  .feature-box p {
+    text-align: center; /* Center the text */
+  }
+}
+
+@media (max-width: 576px) {
+  .feature-section-2 h2 {
+    font-size: 22px; /* Further reduce font size on smaller screens */
+  }
+
+  .feature-section-2 p {
+    font-size: 12px; /* Further reduce paragraph font size */
+  }
+}

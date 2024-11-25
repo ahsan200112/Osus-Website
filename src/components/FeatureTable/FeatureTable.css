@@ -1,0 +1,70 @@
+/* Table styling */
+.feature-table {
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Row gap */
+    width: 100%;
+  }
+  
+  /* Header row */
+  .header-row th {
+    background-color: rgba(36, 100, 148, 0.35);
+    color: rgba(60, 60, 60, 1);
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 15px;
+    border: none;
+    border-right: 1px solid rgba(140, 140, 140, 1); /* Add border around data cells */
+  }
+  .checkmark-img {
+    width: 20px;  /* Adjust width to fit the table cell */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image horizontally if required */
+    display: block; /* Ensures that the image behaves like a block element */
+  }
+  
+  
+  /* Data rows */
+  .feature-table tbody tr td {
+    background: rgba(36, 100, 148, 0.08);
+    color:rgba(131, 142, 156, 1);
+    font-size: 1rem;
+    padding: 12px;
+    border: none;
+    border-right: 1px solid rgba(140, 140, 140, 1); /* Add border around data cells */
+  }
+  
+  /* Rounded corners */
+  .header-row th:first-child,
+  .feature-table tbody tr td:first-child {
+    border-top-left-radius: 18px !important;
+    border-bottom-left-radius: 18px !important;
+  }
+  
+  .header-row th:last-child,
+  .feature-table tbody tr td:last-child {
+    border-top-right-radius: 18px !important;
+    border-bottom-right-radius: 18px !important;
+  }
+  .table td:last-child {
+    border-right: none; /* Remove the border from the last column */
+  }
+  .table th:last-child {
+    border-right: none; /* Remove the border from the last column */
+  }
+  
+  /* Responsive adjustments */
+  .table-responsive {
+    overflow-x: auto; /* Allows horizontal scrolling for small screens */
+  }
+  
+  @media (max-width: 768px) {
+    .feature-table {
+      font-size: 0.9rem; /* Smaller font size for small screens */
+    }
+    .feature-table tbody tr td {
+        padding: 10px; /* Adjust padding for smaller screens */
+        text-align: center; /* Ensure content is center-aligned */
+        vertical-align: middle; /* Ensures vertical alignment is maintained */
+    }
+  }
+  

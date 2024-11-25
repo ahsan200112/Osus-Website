@@ -1,0 +1,41 @@
+.custom-spacing{
+    margin-right: 3.5rem !important;
+    margin-left: 3.5rem !important;
+    padding-right: 3.5rem !important;
+    padding-left: 3.5rem !important;
+}
+.custom2-spacing{
+    margin-right: 2.2rem !important;
+    margin-left: 2.2rem !important;
+    padding-right: 2.0rem !important;
+    padding-left: 2.0rem !important;
+}
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    .custom-spacing {
+      margin-right: 1rem !important;
+      margin-left: 1rem !important;
+      padding-right: 1rem !important;
+      padding-left: 1rem !important;
+    }
+  
+    .custom2-spacing {
+      margin-right: 0.5rem !important;
+      margin-left: 0.5rem !important;
+      padding-right: 0.5rem !important;
+      padding-left: 0.5rem !important;
+    }
+  
+    h1 {
+      font-size: 1.5rem; /* Adjust heading size */
+    }
+  
+    p {
+      font-size: 1rem; /* Adjust paragraph size */
+    }
+  
+    .btn {
+      font-size: 0.875rem; /* Adjust button size */
+      padding: 0.5rem 1rem; /* Adjust button padding */
+    }
+  }

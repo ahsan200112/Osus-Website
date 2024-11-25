@@ -1,0 +1,144 @@
+.features-section h2 {
+  font-weight: bold;
+}
+
+.features-section img {
+  max-height: 163px; /* Limit image height */
+  object-fit: contain; /* Ensure images fit well */
+  width: 100%; /* Ensure images fill the container */
+  max-width: 250px; /* Set max width for consistency */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center image horizontally */
+  display: block; /* Ensures the image behaves as a block element */
+}
+
+/* Add padding/margin to image and content sections */
+.image-container {
+  padding-right: 40px; /* Add spacing to the right of the image */
+}
+
+.content-container {
+  padding-left: 40px; /* Add spacing to the left of the text */
+}
+
+/* Reverse Layout for Second Feature Item (Desktop) */
+.flex-row-reverse {
+  flex-direction: row-reverse; /* Reverse the content (image and text) */
+}
+
+/* For alternating layout */
+.image-container {
+  padding-right: 0;
+  padding-left: 40px;
+}
+
+.content-container {
+  padding-left: 0;
+  padding-right: 40px;
+}
+.slick-dots {
+  bottom: 0px !important;
+}
+.slick-dots li button:before {
+  color: #000000; /* Active dot color */
+}
+
+.slick-dots li button {
+  color: #d3d3d3; /* Inactive dots (light grey) */
+}
+
+
+/* Ensure spacing is responsive */
+@media (max-width: 768px) {
+  .image-container,
+  .content-container {
+    padding: 0; /* Remove extra padding for smaller screens */
+    margin-bottom: 20px; /* Add spacing between stacked elements */
+  }
+
+  /* Slider View (Mobile) */
+  .feature-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Image on Top in Mobile */
+  .feature-item .image-container {
+    order: -1;  /* This will make the image appear first in mobile view */
+  }
+
+  /* Adjust Button and Content Spacing */
+  .feature-item .content-container a {
+    margin-top: 15px;
+  }
+  
+  /* Center image in mobile view */
+  .carousel-item img {
+    margin: 0 auto; /* Centers the image */
+    display: block; /* Make sure it’s treated as a block element */
+  }
+}
+
+/* For Desktop: Image and Content Spacing */
+.col-md-6 {
+  padding: 20px;
+}
+
+/* Carousel Styling for Mobile */
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-inner {
+  text-align: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.features-section p {
+  padding: 0px 12px 0px 3px;
+}
+
+.features-section a{
+  background-color:rgba(36, 100, 148, 1);
+  color: white;
+}
+
+/* Remove horizontal scroll */
+.slick-slider {
+  text-align: center;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Move dots up */
+.slick-dots {
+  position: relative;
+  bottom: 30px; /* Move dots higher */
+  margin-top: -10px;
+}
+
+.slick-dots li button:before {
+  color: rgba(36, 100, 148, 1); /* Color for the pagination dots */
+}
+
+.slick-prev, .slick-next {
+  display: none; /* Remove arrows for mobile view */
+}
+
+/* Ensure images don't overflow on mobile */
+.carousel-item img {
+  width: 100%; /* Ensure images fit within the container */
+}
+
+/* Make all images the same size */
+.feature-item img {
+  width: 250px; /* Adjust to match the size of the smallest image in the laptop view */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the image */
+  display: block; /* Make sure the image is centered */
+}
