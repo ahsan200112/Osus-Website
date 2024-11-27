@@ -1,15 +1,48 @@
 /* General Section Styling */
 .testimonials-section {
-    background: rgb(65 115 153); /* Section background color */
-    font-family: "Plus Jakarta Sans", sans-serif; /* Use Plus Jakarta Sans */
-  }
-  .testimonials-section h5{
-    font-weight: 500 !important;
-  }
-  .testimonials-section p{
+  background: rgb(65 115 153); /* Section background color */
+  font-family: "Plus Jakarta Sans", sans-serif; /* Use Plus Jakarta Sans */
+}
+
+.testimonials-section h5 {
+  font-weight: 500 !important;
+}
+
+.testimonials-section p {
   color: rgba(202, 202, 202, 1);
 }
-.testimonials-section h6{
-    font-weight: 500 !important;
-    font-size: 18px !important;
+
+.testimonials-section h6 {
+  font-weight: 500 !important;
+  font-size: 18px !important;
+}
+
+/* Slick Dots Styling */
+.slick-dots li button:before {
+  color: white; /* Dot color */
+  font-size: 12px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: rgba(36, 100, 148, 1); /* Active dot color */
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 20px;
+  color: white !important;
+  z-index: 2;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: white;
+  font-size: 24px;
+}
+
+/* Slider Responsiveness */
+@media (max-width: 768px) {
+  .testimonials-section h2 {
+    font-size: 24px;
   }
+}
