@@ -92,7 +92,8 @@ direction: ltr;
 }
 
 .footer-form button:hover {
-  background-color: #242f3f;
+  background-color: rgba(36, 100, 148, 1);
+  color: rgb(207, 207, 206);
 }
 
 .footer-copyright {

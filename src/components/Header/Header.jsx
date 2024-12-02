@@ -46,7 +46,7 @@ const Header = () => {
         </div>
         
         {/* Start Free Trial Button */}
-        <Link className="btn btn-primary d-none d-lg-inline-block" to="/start-trial" style={{
+        <Link className="btn btn-primary d-none d-lg-inline-block header-button" to="/start-trial" style={{
           backgroundColor: "white", color: "black", borderColor: "rgba(0, 0, 0, 0.2)"
         }}>
           {t('startFreeTrial')} 

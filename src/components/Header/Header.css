@@ -1,3 +1,7 @@
+.header-button:hover{
+    background-color: rgba(36, 100, 148, 1) !important;
+    color: white !important;
+}
 @media (max-width: 1199px){
     .language-toggle-container{
         margin-right:-92px;
