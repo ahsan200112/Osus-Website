@@ -1,55 +1,57 @@
 import React, { useState } from "react";
 import "./PricingComponentForBuy.css";
+import { useTranslation } from 'react-i18next';
 
 const PricingComponentForBuy = () => {
   const [isYearly, setIsYearly] = useState(false);
+  const { t } = useTranslation();  // Initialize translation
 
   // Pricing Plans Data
   const pricingPlans = [
     {
-      title: "Freebie",
-      description: "Ideal for individuals who need quick access to basic features.",
-      price: isYearly ? "$0" : "$0",
+      title: t('Freebie'),
+      description: t('Ideal for individuals who need quick access to basic features.'),
+      price: isYearly ? "SAR 0" : "SAR 0",
       features: [
-        { text: "Up to 2 users", available: true },
-        { text: "Up to 2 users", available: true },
-        { text: "Basic inventory management", available: true },
-        { text: "Basic inventory management", available: true },
-        { text: "Analytics and reporting tools", available: false },
-        { text: "Custom integrations", available: false },
-        { text: "Basic inventory management", available: false },
-        { text: "Basic inventory management", available: false },
+        { text: t('Up to 2 users'), available: true },
+        { text: t('Up to 2 users'), available: true },
+        { text: t('Basic inventory management'), available: true },
+        { text: t('Basic inventory management'), available: true },
+        { text: t('Analytics and reporting tools'), available: false },
+        { text: t('Custom integrations'), available: false },
+        { text: t('Basic inventory management'), available: false },
+        { text: t('Basic inventory management'), available: false },
       ],
     },
     {
-      title: "Professional",
-      description: "Ideal for individuals who need advanced features and tools for client work.",
-      price: isYearly ? "$20" : "$25",
+      title: t('Professional'),
+      description: t('Ideal for individuals who need advanced features and tools for client work.'),
+      price: isYearly ? "SAR 20" : "SAR 25",
       features: [
-        { text: "Up to 10 users", available: true },
-        { text: "Advanced inventory management", available: true },
-        { text: "Analytics and reporting tools", available: true },
-        { text: "24/7 support", available: true },
-        { text: "Basic inventory management", available: true },
-        { text: "Basic inventory management", available: true },
-        { text: "Basic inventory management", available: false },
-        { text: "Basic inventory management", available: false },
+        { text: t('Up to 10 users'), available: true },
+        { text: t('Advanced inventory management'), available: true },
+        { text: t('Analytics and reporting tools'), available: true },
+        { text: t('24/7 support'), available: true },
+        { text: t('Basic inventory management'), available: true },
+        { text: t('Basic inventory management'), available: true },
+        { text: t('Basic inventory management'), available: false },
+        { text: t('Basic inventory management'), available: false },
       ],
       highlight: true, // Highlights the Professional plan
     },
     {
-      title: "Enterprise",
-      description: "Designed for large businesses with unique requirements.",
-      price: isYearly ? "$80" : "$100",
+      title: t('Enterprise'),
+      description: t('Designed for large businesses with unique requirements.'),
+      price: isYearly ? "SAR 80" : " SAR 100",
       features: [
-        { text: "Unlimited users", available: true },
-        { text: "24/7 support", available: true },
-        { text: "Custom integrations", available: true },
-        { text: "Dedicated account manager", available: true },
-        { text: "Priority support", available: true },
-        { text: "Analytics and reporting tools", available: true },
-        { text: "Advanced inventory management", available: true },
-        { text: "Basic inventory management", available: true },
+        { text: t('Unlimited users'), available: true },
+        { text: t('24/7 support'), available: true },
+        { text: t('Custom integrations'), available: true },
+        { text: t('Dedicated account manager'), available: true },
+        { text: t('Priority support'), available: true },
+        { text: t('Analytics and reporting tools'), available: true },
+        { text: t('Advanced inventory management'), available: true },
+        { text: t('Basic inventory management'), available: true },
       ],
     },
   ];
@@ -61,13 +63,13 @@ const PricingComponentForBuy = () => {
           className={`toggle-button ${!isYearly ? "active" : ""}`}
           onClick={() => setIsYearly(false)}
         >
-          Pay Monthly
+          {t('Pay Monthly')}
         </button>
         <button
           className={`toggle-button ${isYearly ? "active" : ""}`}
           onClick={() => setIsYearly(true)}
         >
-          Pay Yearly <span className="save-badge">Save 25%</span>
+         { t('Pay Yearly')} <span className="save-badge">{t('Save 25%')}</span>
         </button>
       </div>
       <div className="pricing-cards-container">
@@ -79,9 +81,9 @@ const PricingComponentForBuy = () => {
             <h3 className="plan-title">{plan.title}</h3>
             <p className="plan-description">{plan.description}</p>
             <div className="plan-price">
-              <span className="price">{plan.price}</span> / Month
+              <span className="price">{plan.price}</span> {t('/ Month')}
             </div>
-            <button className="plan-button">Get Started Now</button>
+            <button className="plan-button">{t('Get Started Now')}</button>
             <ul className="plan-features">
               {plan.features.map((feature, featureIndex) => (
                 <li

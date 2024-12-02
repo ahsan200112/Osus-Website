@@ -6,8 +6,10 @@ import 'slick-carousel/slick/slick-theme.css'; // Import Slick Carousel Theme CS
 import Retail from '../../assets/images/RetailStore.png';
 import Restaurant from '../../assets/images/Restaurant.png';
 import Services from '../../assets/images/Services.png';
+import { useTranslation } from 'react-i18next';
 
 function FeaturesSection3() {
+  const { t } = useTranslation();  // Initialize translation
   const settings = {
     infinite: true, // Enable infinite looping
     speed: 500, // Speed of transition between slides
@@ -41,54 +43,54 @@ function FeaturesSection3() {
   return (
     <section className="feature-section">
       <div className="container">
-        <h2 className="text-center mb-4 top-head">Our Industry-Specific Solutions</h2>
+        <h2 className="text-center mb-4 top-head">{t('Our Industry-Specific Solutions')}</h2>
         <p className="text-center mb-5 top-p">
-          Every business is unique, and so are its challenges. That's why we've tailored our POS solutions to meet the needs of specific industries.
+         {t('Every business is unique, and so are its challenges. Thats why we have tailored our POS solutions to meet the needs of specific industries.')}
         </p>
 
         {/* React Slick Slider */}
         <Slider {...settings}>
           {/* Box 1 */}
           <div className="feature-box p-4 transition-effect">
-            <h4>Retail Stores</h4>
+            <h4>{('Retail Stores')}</h4>
             <p>
-              Streamline your retail operations with tools designed to enhance efficiency and customer satisfaction.
+             {t('Streamline your retail operations with tools designed to enhance efficiency and customer satisfaction.')}
             </p>
             <div className="feature-icon">
-              <img src={Retail} alt="Retail Stores" />
+              <img src={Retail} />
             </div>
           </div>
 
           {/* Box 2 */}
           <div className="feature-box p-4 transition-effect">
-            <h4>Restaurants and Cafes</h4>
+            <h4>{t('Restaurants and Cafes')}</h4>
             <p>
-              Elevate your dining experience with features tailored for restaurants and cafes. Manage tables efficiently.
+             {t(' Elevate your dining experience with features tailored for restaurants and cafes. Manage tables efficiently.')}
             </p>
             <div className="feature-icon">
-              <img src={Restaurant} alt="Restaurants and Cafes" />
+              <img src={Restaurant} />
             </div>
           </div>
 
           {/* Box 3 */}
           <div className="feature-box p-4 transition-effect">
-            <h4>Service-Businesses</h4>
+            <h4>{t('Service-Businesses')}</h4>
             <p>
-              Simplify operations and deliver superior service with features built for service-based businesses.
+             {t(' Simplify operations and deliver superior service with features built for service-based businesses.')}
             </p>
             <div className="feature-icon">
-              <img src={Services} alt="Service-Businesses" />
+              <img src={Services} />
             </div>
           </div>
 
           {/* Box 4 */}
           <div className="feature-box p-4 transition-effect">
-            <h4>Other Solutions</h4>
+            <h4>{t('Other Solutions')}</h4>
             <p>
-              Explore our other tailored solutions for various industries to enhance operational efficiency.
+              {t('Explore our other tailored solutions for various industries to enhance operational efficiency.')}
             </p>
             <div className="feature-icon">
-              <img src={Services} alt="Other Solutions" />
+              <img src={Services} />
             </div>
           </div>
         </Slider>

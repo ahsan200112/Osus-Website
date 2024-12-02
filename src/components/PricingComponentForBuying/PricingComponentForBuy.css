@@ -51,6 +51,9 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
   }
+  [dir="rtl"] .pricing-card{
+    text-align: right;
+  }
   
   .pricing-card.highlighted {
     background-color: rgb(36, 100, 148);

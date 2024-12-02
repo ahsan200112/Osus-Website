@@ -6,25 +6,27 @@ import "./FeaturesSection1.css";
 import featureImage1 from "../../assets/images/featureImage1.png";
 import featureImage2 from "../../assets/images/featureImage2.png";
 import featureImage3 from "../../assets/images/featureImage3.png";
+import { useTranslation } from 'react-i18next';
 
 const FeaturesSection1 = () => {
+  const { t } = useTranslation();  // Initialize translation
   const features = [
     {
-      title: "Integrated Sales and Management System",
+      title: t('Integrated Sales and Management System'),
       description:
-        "Cloud-Based Cashier: Accessible from anywhere, anytime. Supports E-Invoicing; Accredited by the Zakat, Tax, and Customs Authority.",
+        t('Cloud-Based Cashier: Accessible from anywhere, anytime. Supports E-Invoicing; Accredited by the Zakat, Tax, and Customs Authority.'),
       image: featureImage1,
     },
     {
-      title: "Flexible and Seamless Payments",
+      title: t('Flexible and Seamless Payments'),
       description:
-        "Accept all types of payments through our partners, offering payment services in Saudi Arabia and around the world.",
+        t('Accept all types of payments through our partners, offering payment services in Saudi Arabia and around the world.'),
       image: featureImage2,
     },
     {
-      title: "Supports E-Invoicing",
+      title: t('Supports E-Invoicing'),
       description:
-        "A flexible cashier system accredited by the Zakat, Tax, and Customs Authority for issuing VAT-compliant invoices. Easily generate your invoices and access tax declaration reports effortlessly.",
+        t('A flexible cashier system accredited by the Zakat, Tax, and Customs Authority for issuing VAT-compliant invoices. Easily generate your invoices and access tax declaration reports effortlessly.'),
       image: featureImage3,
     },
   ];
@@ -45,12 +47,10 @@ const FeaturesSection1 = () => {
       <div className="container">
         {/* Section Header */}
         <div className="text-center mb-5">
-          <h5 className="text-primary">Key Features</h5>
-          <h2>Why Choose Our POS System?</h2>
+          <h5 className="text-primary">{t('Key Features')}</h5>
+          <h2>{t('Why Choose Our POS System?')}</h2>
           <p className="text-muted">
-            Discover the features that make our POS system the ultimate tool for
-            streamlining your business operations and enhancing customer
-            satisfaction.
+            {t('Discover the features that make our POS system the ultimate tool for streamlining your business operations and enhancing customer satisfaction.')}
           </p>
         </div>
 
@@ -64,11 +64,11 @@ const FeaturesSection1 = () => {
                   alt={feature.title}
                   className="img-fluid mb-3"
                 />
-                <h6 className="text-primary">A flexible cashier</h6>
+                <h6 className="text-primary">{t('A flexible cashier')}</h6>
                 <h4>{feature.title}</h4>
                 <p className="text-muted">{feature.description}</p>
                 <a href="/" className="btn btn-primary">
-                  Learn More
+                  {t('Learn More')}
                 </a>
               </div>
             ))}
@@ -79,9 +79,8 @@ const FeaturesSection1 = () => {
         <div className="row d-none d-lg-flex">
           {features.map((feature, index) => (
             <div
-              className={`col-lg-12 d-flex align-items-center mb-5 ${
-                index % 2 !== 0 ? "flex-row-reverse" : ""
-              }`} // Alternating layout
+              className={`col-lg-12 d-flex align-items-center mb-5 ${index % 2 !== 0 ? "flex-row-reverse" : ""
+                }`} // Alternating layout
               key={index}
             >
               {/* Image */}
@@ -95,11 +94,11 @@ const FeaturesSection1 = () => {
 
               {/* Content */}
               <div className="col-md-6">
-                <h6 className="text-primary">A flexible cashier</h6>
+                <h6 className="text-primary">{t('A flexible cashier')}</h6>
                 <h4>{feature.title}</h4>
                 <p className="text-muted">{feature.description}</p>
                 <a href="/" className="btn btn-primary">
-                  Learn More
+                  {t('Learn More')}
                 </a>
               </div>
             </div>

@@ -4,8 +4,10 @@ import Section3Image from "../../assets/images/Section3Image.png"; // Replace wi
 import Avatar1 from "../../assets/images/Avatar1.png";
 import Avatar2 from "../../assets/images/Avatar2.png";
 import Avatar3 from "../../assets/images/Avatar3.png";
+import { useTranslation } from 'react-i18next';
 
 const StillHaveQuestion = () => {
+  const { t } = useTranslation();  // Initialize translation
   return (
     <section className="section3 py-6" style={{marginTop: "10rem"}}>
       <div className="container">
@@ -23,17 +25,17 @@ const StillHaveQuestion = () => {
               <img src={Avatar3} alt="Avatar 3" className="avatar" />
             </div>
             <h2 >
-            Still have questions?
+            {t('Still have questions?')}
             </h2>
             <p className="fw-bold" style={{ fontSize: "18px", color: "rgba(209, 209, 209, 1)" }}>
-            Can’t find the answer you’re looking for? Please chat to our friendly team.
+            {t('Can not find the answer you are looking for? Please chat to our friendly team.')}
             </p>
             <div className="button-container">
               <a
                 href="/"
                 className="btn get-started-btn"
               >
-                Get in touch
+               {t('GET IN TOUCH')}
               </a>
             </div>
           </div>

@@ -3,22 +3,24 @@ import Slider from "react-slick";
 import "./Testimonials.css"; // Minimal custom CSS
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { useTranslation } from 'react-i18next';
 
 const Testimonials = () => {
+  const { t } = useTranslation();  // Initialize translation
   const testimonials = [
     {
-      name: "Candice Wu",
-      position: "Product Manager, Sisyphus",
+      name: t('Candice Wu'),
+      position: t('Product Manager, Sisyphus'),
       image: require("../../assets/images/ProfileAvatar.png"),
     },
     {
-      name: "John Doe",
-      position: "CEO, Example Corp",
+      name: t('John Doe'),
+      position: t('CEO, Example Corp'),
       image: require("../../assets/images/ProfileAvatar.png"), // Replace with your image path
     },
     {
-      name: "Jane Smith",
-      position: "Marketing Head, Alpha",
+      name: t('Jane Smith'),
+      position: t('Marketing Head, Alpha'),
       image: require("../../assets/images/ProfileAvatar.png"), // Replace with your image path
     },
   ];
@@ -48,13 +50,13 @@ const Testimonials = () => {
       <div className="container">
         {/* Section Header */}
         <h5 className="text-white mb-3" style={{ marginTop: "-20px" }}>
-          Testimonials
+          {t('Testimonials')}
         </h5>
         <h2
           className="text-white fw-semibold mx-auto mb-5"
           style={{ maxWidth: "800px", marginTop: "30px" }}
         >
-          We’ve been using Untitled to kick start every new project and can’t imagine working without it.
+          {t('We have been using Untitled to kick start every new project and can not imagine working without it.')}
         </h2>
 
         {/* Testimonial Slider */}

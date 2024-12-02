@@ -1,0 +1,25 @@
+.language-toggle-container {
+    display: flex;
+    align-items: center;
+    margin-right: -120px; /* Space between toggle and the rest of the navbar */
+  }
+  
+  .language-toggle {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .language-toggle:hover {
+    color: #007bff;
+  }
+  
+  .language-toggle span {
+    display: flex;
+    align-items: center;
+  }
+  

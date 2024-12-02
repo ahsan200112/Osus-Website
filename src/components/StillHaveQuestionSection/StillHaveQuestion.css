@@ -67,7 +67,21 @@
   .avatar-container{
     margin-bottom: 25px;
   }
-  
+  [dir="rtl"] .section3 .text-container {
+    padding-right: 0; /* Remove padding on the right */
+    padding-left: 0px; /* Slight padding for the text */
+  }
+  @media (max-width: 984px) {
+    [dir="rtl"] .section3 .text-container {
+      padding-right: 39px;
+    }
+    [dir="rtl"] .section3 .button-container {
+      margin-bottom: 15px;
+    }
+    [dir="rtl"] .section3 h2{
+      margin-top: 0px;
+    }
+ }
   /* For smaller screens (mobile responsiveness) */
   @media (max-width: 768px) {
     .section3{
@@ -76,12 +90,14 @@
       justify-content: center;
     }
     
-  
+    [dir="rtl"] .section3 .text-container {
+      padding-right: 21px;
+    }
     .section3 h2 {
       align-items: center;
       font-size: 22px; /* Adjust heading size for mobile */
       padding-bottom: 5px;
-      margin-top: -80px;
+      margin-top: -10px;
     }
   
     .section3 p {
