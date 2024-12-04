@@ -5,8 +5,8 @@ import ServicesPage from '../pages/ServicesPage';
 import FeaturesPage from '../pages/FeaturesPage';
 import PricingPage from '../pages/PricingPage';
 import ContactPage from '../pages/ContactPage';
-import Login from '../pages/Login';
-import Signup from '../pages/Signup';
+import Login from '../pages/Login/Login';
+import Signup from '../pages/Signup/Signup';
 
 const AppRoutes = () => {
     return (

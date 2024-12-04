@@ -1,15 +1,15 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Logo from "../assets/images/logo.png";
-import Heroimage from "../assets/images/HeroImage.png";
-import "./Signup.css";
+import Logo from "../../assets/images/logo.png";
+import Heroimage from "../../assets/images/HeroImage.png";
+import "./Login.css";
 
-const Signup = () => {
+const Login = () => {
   return (
-    <div className="signup-container">
-      <div className="signup-card">
+    <div className="login-container">
+      <div className="login-card">
         {/* Left Section: Create Account */}
-        <div className="signup-left">
+        <div className="login-left">
           <div className="logo-container">
             {/* Replace src with your logo's URL */}
             <img
@@ -18,14 +18,14 @@ const Signup = () => {
               className="company-logo"
             />
           </div>
-          <h2>Create Account</h2>
+          <h2>Login to your account</h2>
           <p>
-            Already have an account?{" "}
-            <a href="/login" className="signin-link">
-              Sign in
+          Create new account?{" "}
+            <a href="/signup" className="signup-link">
+              Sign up
             </a>
           </p>
-          <form className="signup-form">
+          <form className="login-form">
           <div className="form-group">
               <input
                 type="text"
@@ -61,35 +61,19 @@ const Signup = () => {
                 required
               />
             </div>
-            <div className="form-group">
-              <input
-                type="password"
-                className="form-control"
-                placeholder="Confirm Password"
-                required
-              />
-            </div>
 
             {/* Sign Up Button */}
-            <button type="submit" className="btn signup-btn">
-              Sign Up
+            <button type="submit" className="btn login-btn">
+              Login
             </button>
-
-             {/* Divider */}
-           {/* <div className="or-divider">OR</div> */}
-
-            {/* Social Buttons */}
-           {/* <button type="button" className="btn social-btn google-btn">
-              Continue with Google
-            </button>
-            <button type="button" className="btn social-btn facebook-btn">
-              Continue with Facebook
-            </button> */}
+            <a href="/forgetpassword" className="forgetpassword-link">
+              forget password?
+            </a>
           </form>
         </div>
 
         {/* Right Section: Introduction */}
-        <div className="signup-right">
+        <div className="login-right">
           <h3>Introducing new features</h3>
           <p>
           Manage sales, inventory, and customer insights seamlessly with a POS system designed for modern businesses.
@@ -107,4 +91,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;
