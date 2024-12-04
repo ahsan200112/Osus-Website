@@ -26,22 +26,14 @@ const Login = () => {
             </a>
           </p>
           <form className="login-form">
-          <div className="form-group">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Name"
-                required
-              />
-            </div>
-            <div className="form-group">
+           {/* <div className="form-group">
               <input
                 type="text"
                 className="form-control"
                 placeholder="Company Name"
                 required
               />
-            </div>
+            </div>  */}
             {/* Email */}
             <div className="form-group">
               <input

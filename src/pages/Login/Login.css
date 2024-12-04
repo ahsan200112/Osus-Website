@@ -26,14 +26,12 @@ body {
 /* Left Section (Create Account) */
 .login-left {
     flex: 1;
-    padding: 40px;
+    padding: 44px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* Center horizontally */
     text-align: center;
-    /* Center text */
     background-color: #fff;
 }
 
@@ -107,7 +105,7 @@ body {
     flex: 1;
     background-color: rgba(36, 100, 148, 1);
     color: #fff;
-    padding: 40px;
+    padding: 60px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -142,9 +140,10 @@ body {
     }
 
     .login-right {
-        order: -1;
+        display: none;
+      /*  order: -1; */
         /* Moves the introduction section to the top */
-        padding: 20px;
+      /*  padding: 20px; */
     }
 
     .login-left {

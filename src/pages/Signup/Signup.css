@@ -2,18 +2,18 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-}
-
-.signup-container {
+  }
+  
+  .signup-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #f5f5f5;
     padding: 15px;
-}
-
-.signup-card {
+  }
+  
+  .signup-card {
     display: flex;
     max-width: 1100px;
     width: 100%;
@@ -21,66 +21,65 @@ body {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Left Section (Create Account) */
-.signup-left {
+  }
+  
+  /* Left Section */
+  .signup-left {
     flex: 1;
-    padding: 32px;
+    padding: 32px 35px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    /* Center horizontally */
     text-align: center;
-    /* Center text */
     background-color: #fff;
-}
-
-.logo-container {
+  }
+  
+  .logo-container {
     margin-bottom: 20px;
-}
-
-.company-logo {
+  }
+  
+  .company-logo {
     max-width: 150px;
     height: auto;
-}
-
-.signup-left h2 {
+  }
+  
+  .signup-left h2 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-}
-
-.signup-left p {
+  }
+  
+  .signup-left p {
     font-size: 14px;
     margin-bottom: 22px;
-}
-
-.login-link {
+  }
+  
+  .login-link {
     color: rgb(36, 100, 148);
     text-decoration: none;
-}
-
-.signup-form{
-    width: 55%;
-}
-
-.form-group {
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 15px;
     margin-bottom: 15px;
     width: 100%;
-}
-
-.form-control {
+  }
+  
+  .form-group {
+    flex: 1;
+  }
+  
+  .form-control {
     width: 100% !important;
-    padding: 8px !important;
+    padding: 7px !important;
     border-radius: 5px !important;
     border: 1px solid #ccc !important;
     color: #333 !important;
     font-size: 15px !important;
-}
-
-.signup-btn {
+  }
+  
+  .signup-btn {
     width: 100%;
     padding: 10px;
     background-color: rgb(36, 100, 148);
@@ -89,102 +88,66 @@ body {
     font-weight: bold;
     border: none;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-top: 10px;
     cursor: pointer;
-}
-
-.signup-btn:hover {
+  }
+  
+  .signup-btn:hover {
     background-color: rgb(30, 85, 125);
-}
-
-/* .or-divider {
-    text-align: center;
-    font-size: 14px;
-    margin-bottom: 20px;
-    color: #666;
-}
-
- .social-btn {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.social-btn:hover {
-    background-color: #f0f0f0;
-}
-
-.google-btn {
-    border-color: #db4437;
-    color: #db4437;
-}
-
-.google-btn:hover {
-    background-color: #faf3f2;
-    border-color: #db4437;
-}
-
-.facebook-btn {
-    border-color: #3b5998;
-    color: #3b5998;
-}
-
-.facebook-btn:hover {
-    background-color: #f0f3f8;
-    border-color: #3b5998;
-} */
-
-/* Right Section (Introduction) */
-.signup-right {
+  }
+  
+  /* Right Section */
+  .signup-right {
     flex: 1;
     background-color: rgba(36, 100, 148, 1);
     color: #fff;
-    padding: 38px;
+    padding: 40px 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.signup-right h3 {
+  }
+  
+  .signup-right h3 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-}
-
-.signup-right p {
-    padding-right: 5px;
-    padding-left: 5px;
+  }
+  
+  .signup-right p {
     text-align: center;
     font-size: 16px;
     margin-bottom: 30px;
-}
-
-.analytics-preview img {
+  }
+  
+  .analytics-preview img {
     margin-top: 10px;
     border-radius: 10px;
     max-width: 100%;
-    padding: 0px 35px;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
+    padding: 0 35px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
     .signup-card {
-        flex-direction: column;
+      flex-direction: column;
     }
-
+  
     .signup-right {
-        order: -1;
+        display: none;
+        /*  order: -1; */
         /* Moves the introduction section to the top */
-        padding: 20px;
+      /*  padding: 20px; */
     }
-
+  
     .signup-left {
-        padding: 20px;
+      padding: 20px;
+      width: 100%;
+    }
+  
+    .form-row {
+      flex-direction: column;
+      gap: 10px;
     }
 }
+  
