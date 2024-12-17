@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/pricing"; // Update the base URL if necessary
+const API_URL = "/api/pricing"; // Update the base URL if necessary
 
 export const getPricingPlans = async () => {
   try {

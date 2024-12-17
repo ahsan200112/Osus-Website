@@ -24,7 +24,7 @@ const Section3 = () => {
             </p>
             <div className="button-container">
               <a
-                href="/"
+                href="/login"
                 className="btn btn-primary get-started-btn"
               >
                {t('Get Started Today')}

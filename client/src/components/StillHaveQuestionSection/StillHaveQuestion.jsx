@@ -32,7 +32,7 @@ const StillHaveQuestion = () => {
             </p>
             <div className="button-container">
               <a
-                href="/"
+                href="/contact"
                 className="btn get-started-btn"
               >
                {t('GET IN TOUCH')}

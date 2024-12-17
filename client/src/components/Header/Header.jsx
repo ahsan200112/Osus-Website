@@ -46,7 +46,7 @@ const Header = () => {
         </div>
         
         {/* Start Free Trial Button */}
-        <Link className="btn btn-primary d-none d-lg-inline-block header-button" to="/start-trial" style={{
+        <Link className="btn btn-primary d-none d-lg-inline-block header-button" to="/login" style={{
           backgroundColor: "white", color: "black", borderColor: "rgba(0, 0, 0, 0.2)"
         }}>
           {t('startFreeTrial')} 
@@ -79,7 +79,7 @@ const Header = () => {
             <Link className="nav-link text-dark fw-semibold" to="/contact">{t('contactUs')}</Link> 
           </li>
           <li className="nav-item mt-3">
-            <Link className="btn btn-primary w-100" style={{backgroundColor:"rgba(36, 100, 148, 1)", color:"white"}} to="/start-trial">
+            <Link className="btn btn-primary w-100" style={{backgroundColor:"rgba(36, 100, 148, 1)", color:"white"}} to="/login">
               {t('startFreeTrial')}  
             </Link>
           </li>

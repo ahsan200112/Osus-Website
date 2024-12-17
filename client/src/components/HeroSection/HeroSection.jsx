@@ -17,7 +17,7 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="mb-4">
-          <a href="/" className="btn btn-primary btn-lg" style={{backgroundColor:"rgba(36, 100, 148, 1)", color:"white"}}>
+          <a href="/login" className="btn btn-primary btn-lg" style={{backgroundColor:"rgba(36, 100, 148, 1)", color:"white"}}>
             {t('Get Started Today')}
           </a>
         </div>

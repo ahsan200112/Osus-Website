@@ -16,7 +16,7 @@ function ContactComponent() {
           </p>
         </div>
         <div className="mb-5 custom2-spacing">
-          <a href="/" className="btn btn-primary btn-lg" style={{backgroundColor:"rgba(36, 100, 148, 1)", color:"white"}}>
+          <a href="/login" className="btn btn-primary btn-lg" style={{backgroundColor:"rgba(36, 100, 148, 1)", color:"white"}}>
            {t('Start Free Trial')}
           </a>
         </div>
