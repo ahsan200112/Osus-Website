@@ -43,7 +43,7 @@
 
 .dashboard-content {
   flex-grow: 1;
-  padding: 20px;
+  padding: 15px;
   overflow-y: auto; /* Ensures content is scrollable */
 }
 

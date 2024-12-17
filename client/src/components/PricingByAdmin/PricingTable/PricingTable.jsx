@@ -33,10 +33,14 @@ const PricingTable = ({ pricingPlans, onEdit, onDelete }) => {
                 </ul>
               </td>
               <td>
-                <Button variant="warning" onClick={() => onEdit(plan)}>
+                <Button variant="warning" onClick={() => onEdit(plan)}
+                  style={{ marginTop: "7px" }}
+                  >
                   Edit
                 </Button>{" "}
-                <Button variant="danger" onClick={() => onDelete(plan._id)}>
+                <Button variant="danger" onClick={() => onDelete(plan._id)}
+                  style={{ marginTop: "10px" }}
+                  >
                   Delete
                 </Button>
               </td>

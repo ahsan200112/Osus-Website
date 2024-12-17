@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; // Import axios for making API requests
+import "./PricingComponentPackage.css";
 
 const PricingComponentPackage = () => {
   const [pricingPlans, setPricingPlans] = useState([]);
