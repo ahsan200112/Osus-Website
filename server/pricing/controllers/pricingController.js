@@ -1,20 +1,5 @@
 const Pricing = require("../models/pricingModel");
-const { validationResult, body } = require("express-validator");
-
-// Middleware to validate incoming requests
-exports.validatePricing = [
-  body("title").notEmpty().withMessage("Title is required"),
-  body("description").notEmpty().withMessage("Description is required"),
-  body("monthlyPrice").notEmpty().withMessage("Price is required"),
-  body("yearlyPrice").notEmpty().withMessage("Yearly Price is required"), // Added validation for yearlyPrice
-  (req, res, next) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
-    next();
-  },
-];
+const validatePricing = require("../validation/pricingValidation");
 
 // Get all pricing plans
 exports.getPricingPlans = async (req, res) => {
@@ -27,7 +12,9 @@ exports.getPricingPlans = async (req, res) => {
 };
 
 // Create a new pricing plan
-exports.createPricingPlan = async (req, res) => {
+exports.createPricingPlan = [
+  validatePricing,
+   async (req, res) => {
   try {
     // Calculate yearly price based on monthly price
     const monthlyPrice = req.body.price; // Assume 'price' is the monthly price
@@ -44,10 +31,13 @@ exports.createPricingPlan = async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: "Error creating pricing plan", error });
   }
-};
+},
+];
 
 // Update a pricing plan by ID
-exports.updatePricingPlan = async (req, res) => {
+exports.updatePricingPlan = [
+  validatePricing,
+ async (req, res) => {
   try {
     // Calculate yearly price based on monthly price if it isn't provided
     const monthlyPrice = req.body.price;
@@ -67,7 +57,8 @@ exports.updatePricingPlan = async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: "Error updating pricing plan", error });
   }
-};
+},
+];
 
 // Delete a pricing plan by ID
 exports.deletePricingPlan = async (req, res) => {

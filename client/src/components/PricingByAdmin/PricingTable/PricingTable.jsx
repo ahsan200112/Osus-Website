@@ -1,12 +1,13 @@
 // src/components/Pricing/PricingTable/PricingTable.js
 import React from "react";
 import { Button, Table } from "react-bootstrap"; // Using Bootstrap
+import "./PricingTable.css";
 
 const PricingTable = ({ pricingPlans, onEdit, onDelete }) => {
   return (
     <div className="pricing-table-container">
-      <Table striped bordered hover responsive>
-        <thead>
+      <Table striped bordered hover responsive  className="thead-center">
+        <thead className="text-center">
           <tr>
             <th>Title</th>
             <th>Description</th>
