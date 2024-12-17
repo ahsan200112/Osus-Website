@@ -46,7 +46,7 @@ const PricingComponentPackage = () => {
             <p className="plan-description">{plan.description}</p>
             <div className="plan-price">
               <span className="price">
-                {isYearly ? plan.yearlyPrice : plan.monthlyPrice}
+              {isYearly ? `SAR ${plan.yearlyPrice}` : `SAR ${plan.monthlyPrice}`}
               </span>{' '}
               {isYearly ? '/ Month' : '/ Month'}
             </div>
