@@ -6,8 +6,8 @@ import "./PricingTable.css";
 const PricingTable = ({ pricingPlans, onEdit, onDelete }) => {
   return (
     <div className="pricing-table-container">
-      <Table striped bordered hover responsive  className="thead-center">
-        <thead className="text-center">
+      <Table striped bordered hover responsive>
+        <thead className="text-center thead-center" style={{verticalAlign: "center"}}>
           <tr>
             <th>Title</th>
             <th>Description</th>

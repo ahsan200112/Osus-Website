@@ -1,6 +1,6 @@
 .pricing-table-container {
     margin-top: 30px;
   }
-  thead-center table>thead {
+.thead-center {
      vertical-align: center !important; 
   }
