@@ -11,6 +11,10 @@ import AdminDashboard from '../pages/AdminDashboard//AdminDashboard';
 import ManagePackage from '../pages/AdminDashboard/ManagePackage/ManagePackage';
 import ManageUsers from '../pages/AdminDashboard/ManageUsers/ManageUsers';
 
+import AdminDashboard2 from '../pages/AdminDashboard2//AdminDashboard2';
+import ManagePackage2 from '../pages/AdminDashboard2/ManagePackage2/ManagePackage2';
+import ManageUsers2 from '../pages/AdminDashboard2/ManageUsers2/ManageUsers2';
+
 const AppRoutes = () => {
     return (
         <Router>
@@ -27,6 +31,11 @@ const AppRoutes = () => {
                     <Route path="packages" element={<ManagePackage />} />
                     <Route path="users" element={<ManageUsers />} />
                     <Route path="settings" element={<div>Settings Page</div>} />
+                </Route>
+
+                <Route path="/admin2" element={<AdminDashboard2 />}>
+                    <Route path="packages2" element={<ManagePackage2 />} />
+                    <Route path="users2" element={<ManageUsers2 />} />
                 </Route>
 
             </Routes>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; // Import axios for making API requests
 import "./PricingComponentPackage.css";
+import { useTranslation } from 'react-i18next';
 
 const PricingComponentPackage = () => {
   const [pricingPlans, setPricingPlans] = useState([]);
@@ -10,7 +11,7 @@ const PricingComponentPackage = () => {
     // Fetch pricing plans from the backend API
     const fetchPricingPlans = async () => {
       try {
-        const response = await axios.get("/api/pricing"); 
+        const response = await axios.get("/api/pricing");
         setPricingPlans(response.data);
       } catch (error) {
         console.error('Error fetching pricing plans:', error);
@@ -20,6 +21,8 @@ const PricingComponentPackage = () => {
     fetchPricingPlans();
   }, []);
 
+  const { t } = useTranslation();
+
   return (
     <div className="pricing-section">
       <div className="toggle-section">
@@ -27,13 +30,13 @@ const PricingComponentPackage = () => {
           className={`toggle-button ${!isYearly ? 'active' : ''}`}
           onClick={() => setIsYearly(false)}
         >
-          Pay Monthly
+          {t("Pay Monthly")}
         </button>
         <button
           className={`toggle-button ${isYearly ? 'active' : ''}`}
           onClick={() => setIsYearly(true)}
         >
-          Pay Yearly <span className="save-badge">Save Money</span>
+          {t("Pay Yearly")} <span className="save-badge">{t("Save Money")}</span>
         </button>
       </div>
       <div className="pricing-cards-container">
@@ -46,11 +49,11 @@ const PricingComponentPackage = () => {
             <p className="plan-description">{plan.description}</p>
             <div className="plan-price">
               <span className="price">
-              {isYearly ? `SAR ${plan.yearlyPrice}` : `SAR ${plan.monthlyPrice}`}
+                {isYearly ? `SAR ${plan.yearlyPrice}` : `SAR ${plan.monthlyPrice}`}
               </span>{' '}
               {isYearly ? '/ Month' : '/ Month'}
             </div>
-            <button className="plan-button">Get Started Now</button>
+            <button className="plan-button">{t("Get Started Now")}</button>
             <ul className="plan-features">
               {plan.features.map((feature, featureIndex) => (
                 <li

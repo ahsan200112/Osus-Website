@@ -52,7 +52,7 @@ function FeaturesSection3() {
         <Slider {...settings}>
           {/* Box 1 */}
           <div className="feature-box p-4 transition-effect">
-            <h4>{('Retail Stores')}</h4>
+            <h4>{t('Retail Stores')}</h4>
             <p>
              {t('Streamline your retail operations with tools designed to enhance efficiency and customer satisfaction.')}
             </p>
@@ -65,7 +65,7 @@ function FeaturesSection3() {
           <div className="feature-box p-4 transition-effect">
             <h4>{t('Restaurants and Cafes')}</h4>
             <p>
-             {t(' Elevate your dining experience with features tailored for restaurants and cafes. Manage tables efficiently.')}
+             {t('Elevate your dining experience with features tailored for restaurants and cafes. Manage tables efficiently.')}
             </p>
             <div className="feature-icon">
               <img src={Restaurant} />
@@ -76,7 +76,7 @@ function FeaturesSection3() {
           <div className="feature-box p-4 transition-effect">
             <h4>{t('Service-Businesses')}</h4>
             <p>
-             {t(' Simplify operations and deliver superior service with features built for service-based businesses.')}
+             {t('Simplify operations and deliver superior service with features built for service-based businesses.')}
             </p>
             <div className="feature-icon">
               <img src={Services} />
