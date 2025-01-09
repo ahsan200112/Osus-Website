@@ -10,6 +10,7 @@ import Signup from '../pages/Signup/Signup';
 import AdminDashboard from '../pages/AdminDashboard//AdminDashboard';
 import ManagePackage from '../pages/AdminDashboard/ManagePackage/ManagePackage';
 import ManageUsers from '../pages/AdminDashboard/ManageUsers/ManageUsers';
+import NotFound from '../components/404NotFound/404NotFound';
 
 import AdminDashboard2 from '../pages/AdminDashboard2//AdminDashboard2';
 import ManagePackage2 from '../pages/AdminDashboard2/ManagePackage2/ManagePackage2';
@@ -26,6 +27,7 @@ const AppRoutes = () => {
                 <Route path="/features" element={<FeaturesPage />} />
                 <Route path="/pricing" element={<PricingPage />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="*" element={<NotFound />} />
                 
                 <Route path="/admin" element={<AdminDashboard />}>
                     <Route path="packages" element={<ManagePackage />} />
